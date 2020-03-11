@@ -1,0 +1,56 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.2"
+
+    defaultConfig {
+        applicationId "com.dev.koindiexample"
+        minSdkVersion 23
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        buildConfigField "String", "BASE_URL", "\"https://abcdomain.co/xyz/\""
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation "androidx.appcompat:appcompat:$appcompat_v"
+    implementation "androidx.core:core-ktx:$xcore_v"
+    implementation "androidx.constraintlayout:constraintlayout:$constraintlyt_v"
+
+    // Koin
+    implementation "org.koin:koin-android:$koin_v"
+    implementation "org.koin:koin-androidx-viewmodel:$koin_v"
+
+    //Coroutines
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$couroutines_v"
+    implementation "com.jakewharton.retrofit:retrofit2-kotlin-coroutines-adapter:$coroutines_adapter_v"
+
+    //Network
+    implementation "com.squareup.retrofit2:retrofit:$retrofit_v"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofit_v"
+
+    // Navigation
+    implementation "androidx.navigation:navigation-fragment-ktx:$nav_v"
+    implementation "androidx.navigation:navigation-ui-ktx:$nav_v"
+
+}

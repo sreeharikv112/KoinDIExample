@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">KoinDIExample</string>
+
+    <string name="landing_fragment">Landing Fragment</string>
+</resources>
