@@ -24,9 +24,6 @@ class LandingFragment : BaseFragment() {
         baseViewModelFactory
     }
 
-    //Injecting utility class for further usage
-    val mAppUtility : AppUtility by inject()
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?

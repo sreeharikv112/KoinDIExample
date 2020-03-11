@@ -1,6 +1,7 @@
 package com.dev.koindiexample.core
 
 import androidx.fragment.app.Fragment
+import com.dev.koindiexample.utils.AppUtility
 import org.koin.android.ext.android.inject
 
 /**
@@ -10,4 +11,8 @@ import org.koin.android.ext.android.inject
 abstract class BaseFragment : Fragment(){
 
     protected val baseViewModelFactory by inject<BaseViewModelFactory>()
+
+    //Injecting utility class for further usage
+    val mAppUtility : AppUtility by inject()
+
 }
