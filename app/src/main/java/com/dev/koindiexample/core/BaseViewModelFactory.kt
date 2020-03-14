@@ -10,7 +10,7 @@ import java.lang.reflect.InvocationTargetException
 /**
  * Base VM factory for individual VM's.
  */
-abstract class BaseViewModelFactory(val context: Application,
+class BaseViewModelFactory(val context: Application,
                                     val mainDispatcher: CoroutineDispatcher,
                                     val ioDispatcher: CoroutineDispatcher
                              ): ViewModelProvider.Factory {

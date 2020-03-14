@@ -2,4 +2,5 @@
     <string name="app_name">KoinDIExample</string>
 
     <string name="landing_fragment">Landing Fragment</string>
+    <string name="initiate_vm_interaction">Initiate VM interaction</string>
 </resources>

@@ -6,8 +6,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".scenes.mainflow.LandingFragment">
 
-
         <TextView
+            android:id="@+id/landingTxt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/landing_fragment"
@@ -16,5 +16,15 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnTwo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/initiate_vm_interaction"
+            app:layout_constraintTop_toBottomOf="@id/landingTxt"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -6,5 +6,6 @@ package com.dev.koindiexample.dependencies
 val appComponent = listOf(
     NetworkDependency,
     AppUtilDependency,
-    UseCaseDependency
+    UseCaseDependency,
+    viewModelDependency
 )
