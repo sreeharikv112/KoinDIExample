@@ -9,6 +9,6 @@ import org.koin.dsl.module
  */
 val AppUtilDependency = module {
 
-    factory { AppUtility(androidContext()) }
+    single { AppUtility(androidContext()) }
 
 }

@@ -21,5 +21,5 @@ val NetworkDependency = module {
             .addCallAdapterFactory(CoroutineCallAdapterFactory())
             .baseUrl(BuildConfig.BASE_URL).build()
     }
-    factory{ get<Retrofit>().create(SampleService::class.java) }
+    single{ get<Retrofit>().create(SampleService::class.java) }
 }
